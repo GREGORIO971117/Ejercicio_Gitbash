@@ -21,7 +21,17 @@ console.log(otroElemento);
 
 btnMostrar.addEventListener("click",function (event) {
 
-    event.preventDefault();
+    event.preventDefault();//se hace que el evento no hafa para lo que esta hecho se cancelan los atributos.
+
+    let element=document.createElement("li");//se agrega la etiqueta li
+    element.innerText="Another item";//es el texto que va a gregar
+    element.classList.add("list-group-item");//se agrega una clase al elemento
+
+    let element2=element.cloneNode(true);
+
+    lista.item(0).before(element2);
+    lista.item(0).after(element);//Prepend es el lugar donde se va a colocar el nuevo elemento en este caso afuera
+
     console.log("Boton presionado por puto");
 })
 

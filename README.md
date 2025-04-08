@@ -1,7 +1,7 @@
 # Ejercicio_Gitbash
-# Título Principal
+# Marciana....
 
-## Subtítulo
+## Muestra de mi pagina
 
 Este es un párrafo de ejemplo. Puedes usar **negritas**, *cursivas* y ~~tachado~~ en Markdown.
 
@@ -53,5 +53,3 @@ def saludo():
 - Elemento 2
   - Sub-elemento 3
   - Sub-elemento 4
-
-Espero que esto te sea útil para aprender Markdown.
