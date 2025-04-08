@@ -28,12 +28,31 @@ btnMostrar.addEventListener("click",function (event) {
     element.classList.add("list-group-item");//se agrega una clase al elemento
 
     let element2=element.cloneNode(true);
+    let element3=element.cloneNode(true);
+    let element4=element.cloneNode(true);
 
-    lista.item(0).before(element2);
-    lista.item(0).after(element);//Prepend es el lugar donde se va a colocar el nuevo elemento en este caso afuera
+    lista.item(1).before(element);
+    lista.item(1).after(element2);
+    lista.item(1).insertAdjacentElement("afterbegin",element3);
+    lista.item(1).insertAdjacentElement("afterend",element4);
+    lista.item(1).insertAdjacentElement("beforebegin",element4);
+    lista.item(1).insertAdjacentElement("beforeend",element4);
+    lista.item(0).insertAdjacentHTML("",`${Nombre}`);
+
+    
+
+    //Prepend es el lugar donde se va a colocar el nuevo elemento en este caso afuera
 
     console.log("Boton presionado por puto");
 })
+
+/*En conclusion este ejercicio es para hacer notar que
+los lenguajes de programacion estan basados en el CRUD
+Create
+Rename
+Update
+Delete
+*/
 
 
 
