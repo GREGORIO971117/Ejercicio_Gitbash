@@ -1,0 +1,34 @@
+{
+    "materia":"informatica",
+    "profesor":"Juan Perez",
+    "alumnos":[
+        {
+            "nombre":"Juan",
+            "edad":20,
+            "notas":[
+                {
+                    "asignatura":"matematicas",
+                    "nota":8.5
+                },
+                {
+                    "asignatura":"fisica",
+                    "nota":7.0
+                }
+            ]
+        },
+        {
+            "nombre":"Maria",
+            "edad":22,
+            "notas":[
+                {
+                    "asignatura":"matematicas",
+                    "nota":9.0
+                },
+                {
+                    "asignatura":"fisica",
+                    "nota":8.5
+                }
+            ]
+        }
+    ]
+}

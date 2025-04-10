@@ -3,6 +3,9 @@ let Nombre=prompt("Ingresa tu nombre:");
 let elementos=document.getElementsByClassName("list-group-item");
 let otroElemento=document.querySelector("ul>li"); //va a traer el primer elemento que regrese de esos
 let btnMostrar=document.getElementById("btnMostrar");
+let RFC=document.getElementById("RFC");
+let telefono=document.getElementById("telefono");
+let CURP=document.getElementById("CURP");
 
 console.log(document.getElementById("encabezado"));
 encabezado.innerText="Gregorio Galindo 2025";
@@ -37,15 +40,34 @@ btnMostrar.addEventListener("click",function (event) {
     lista.item(1).insertAdjacentElement("afterend",element4);
     lista.item(1).insertAdjacentElement("beforebegin",element4);
     lista.item(1).insertAdjacentElement("beforeend",element4);
-    lista.item(0).insertAdjacentHTML("",`${Nombre}`);
+    lista.item(0).insertAdjacentHTML("afterend",`${Nombre}`);
 
     
 
     //Prepend es el lugar donde se va a colocar el nuevo elemento en este caso afuera
 
-    console.log("Boton presionado por puto");
+    console.log("Boton presionado");
 })
 
+function UpperCase(event) {
+    event.preventDefault();//
+    event.target.value=event.target.value.trim().toUpperCase();//
+    
+}
+
+window.addEventListener("load",function (event) {
+    console.log("La pagina se ha cargado correctamente");
+});
+
+//blur es cuando se pierde el foco de un elemento
+RFC.addEventListener("blur",UpperCase);
+telefono.addEventListener("blur",function (event) {
+    event.preventDefault();//se
+    telefono.value=telefono.value.trim().slice(0,10);//
+});
+
+CURP.addEventListener("blur",UpperCase);//
+    
 /*En conclusion este ejercicio es para hacer notar que
 los lenguajes de programacion estan basados en el CRUD
 Create
@@ -53,7 +75,3 @@ Rename
 Update
 Delete
 */
-
-
-
-
